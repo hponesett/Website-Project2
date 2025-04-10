@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <!-- Lock Screen -->
+    <section id="lockScreen" class="screen active">
+        <div id="particles-js"></div>
+        <div class="lock-content glassmorphism">
+            <h1>Our Love Story</h1>
+            <p>Enter the password to unlock our love story</p>
+            <div class="date-input-container">
+                <input type="text" id="dateInput" placeholder="Enter password here" maxlength="5">
+                <button id="unlockButton">Unlock</button>
+            </div>
+            <p id="errorMessage" class="error-message">Incorrect password. Try again, love.</p>
+        </div>
+    </section>
+
+    <!-- Main Content (Hidden until unlocked) -->
+    <section id="mainContent" class="screen">
+        <div id="particles-js-main"></div>
+        <audio id="audioPlayer" loop>
+            <source src="Lord-Huron-The-Night-We-Met-(Oksoundit.com).mp3" type="audio/mp3">
+        </audio>
+        
+        <div class="container">
+            <!-- Left Section: Anniversary Calendar -->
+            <section class="calendar-section glassmorphism">
+                <h2>Anniversary Calendar</h2>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <h3>March 2025</h3>
+                    </div>
+                    <div class="calendar-grid">
+                        <!-- Calendar days will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center Section: Love Letter Envelope -->
+            <section class="envelope-section glassmorphism">
+                <h2>Our Love Letter</h2>
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-content">
+                        <div class="letter">
+                            <h3>Dear Wifeyy, My Mama, my love,</h3>
+                            <p>From the moment we met, I knew everything in my world had changed. It was like the stars aligned, just for us, and every step we've taken since then has been a beautiful part of this journey. I'll never forget that feeling, just like the melody of "The Night We Met" that keeps playing in my heart whenever I think of you.</p>
+                            <p>You've made me feel like I'm home, wherever we are, and I'm so grateful for every moment, every laugh, and every whisper. I can't wait to make more memories with you, to keep writing our love story, and to keep loving you more with each passing day.</p>
+                            <p>You are my everything, and I promise I'll keep loving you, just like that night we met, forever.</p>
+                            <p class="signature">With all my heart,<br>Mg. 💗</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Section: Countdown and Game -->
+            <section class="countdown-section glassmorphism">
+                <h2>Countdown to Our Anniversary</h2>
+                <div class="countdown-container">
+                    <div id="countdownDisplay">
+                        <!-- Countdown will be populated by JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="game-button-container">
+                    <a href="game.html" class="game-button">
+                        <span class="button-text">Play Our Love Story Game</span>
+                        <span class="heart-sparkles">💖</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

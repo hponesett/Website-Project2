@@ -1,0 +1,168 @@
+/* Letter Styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd1dc, #ffb6c1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #333;
+}
+
+#particles-js-letter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.letter-container {
+    width: 90%;
+    max-width: 800px;
+    z-index: 1;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Glassmorphism Effect */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glassmorphism:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Letter Header */
+.letter-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 105, 180, 0.3);
+    padding-bottom: 1rem;
+}
+
+.letter-header h1 {
+    color: #ff1493;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Dancing Script', cursive;
+}
+
+.date {
+    color: #666;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Letter Body */
+.letter-body {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    padding: 1rem 0;
+}
+
+.greeting {
+    font-size: 1.5rem;
+    color: #ff69b4;
+    margin-bottom: 1.5rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+.signature {
+    text-align: right;
+    font-size: 1.3rem;
+    color: #ff1493;
+    margin-top: 2rem;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Letter Footer */
+.letter-footer {
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 2px solid rgba(255, 105, 180, 0.3);
+    padding-top: 1rem;
+}
+
+.return-button {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.return-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heart Animation */
+.heart-animation {
+    position: absolute;
+    font-size: 1.5rem;
+    pointer-events: none;
+    animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .letter-container {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .letter-header h1 {
+        font-size: 2rem;
+    }
+    
+    .letter-body {
+        font-size: 1rem;
+    }
+    
+    .greeting {
+        font-size: 1.3rem;
+    }
+    
+    .signature {
+        font-size: 1.2rem;
+    }
+} 

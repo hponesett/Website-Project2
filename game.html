@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story Quiz</title>
+    <link rel="stylesheet" href="game-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js-game"></div>
+    
+    <div class="game-container">
+        <div class="game-header glassmorphism">
+            <h1>How Well Do You Know Our Story?</h1>
+            <p>Answer these questions about our journey together</p>
+        </div>
+        
+        <div class="game-content glassmorphism">
+            <div id="question-container">
+                <h2 id="question-text">Loading question...</h2>
+                <div id="options-container">
+                    <!-- Options will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div id="score-container" class="hidden">
+                <h3>Your Love Score</h3>
+                <div id="scoreDisplay">0/3</div>
+                <p class="score-message">You remembered our special moments!</p>
+                <div class="button-container">
+                    <button id="homeButton" class="home-button">Return to Homepage</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html> 
